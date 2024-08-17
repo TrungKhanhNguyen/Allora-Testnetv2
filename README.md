@@ -120,6 +120,11 @@ nano config.json
 }
 
 ```
+- Run config
+```bash
+chmod +x init.config
+./init.config
+```
 - Edit app.py file, with ```API_KEY``` is your API Key in Coingecko
 ```bash
 rm -rf app.py
@@ -168,20 +173,20 @@ def get_inference(token):
         if response.status_code == 200:
           data = response.json()
           if token == 'BTC':
-            price1 = data["bitcoin"]["usd"] + data["bitcoin"]["usd"]*1/100
-            price2 = data["bitcoin"]["usd"] - data["bitcoin"]["usd"]*1/100
+            price1 = data["bitcoin"]["usd"] + data["bitcoin"]["usd"]*1/200
+            price2 = data["bitcoin"]["usd"] - data["bitcoin"]["usd"]*1/200
           if token == 'ETH':
-            price1 = data["ethereum"]["usd"] + data["ethereum"]["usd"]*1/100
-            price2 = data["ethereum"]["usd"] - data["ethereum"]["usd"]*1/100      
+            price1 = data["ethereum"]["usd"] + data["ethereum"]["usd"]*1/200
+            price2 = data["ethereum"]["usd"] - data["ethereum"]["usd"]*1/200      
           if token == 'SOL':
-            price1 = data["solana"]["usd"] + data["solana"]["usd"]*1/100
-            price2 = data["solana"]["usd"] - data["solana"]["usd"]*1/100  
+            price1 = data["solana"]["usd"] + data["solana"]["usd"]*1/200
+            price2 = data["solana"]["usd"] - data["solana"]["usd"]*1/200  
           if token == 'BNB':
-            price1 = data["binancecoin"]["usd"] + data["binancecoin"]["usd"]*1/100
-            price2 = data["binancecoin"]["usd"] - data["binancecoin"]["usd"]*1/100   
+            price1 = data["binancecoin"]["usd"] + data["binancecoin"]["usd"]*1/200
+            price2 = data["binancecoin"]["usd"] - data["binancecoin"]["usd"]*1/200   
           if token == 'ARB':
-            price1 = data["arbitrum"]["usd"] + data["arbitrum"]["usd"]*1/100
-            price2 = data["arbitrum"]["usd"] - data["arbitrum"]["usd"]*1/100            
+            price1 = data["arbitrum"]["usd"] + data["arbitrum"]["usd"]*1/200
+            price2 = data["arbitrum"]["usd"] - data["arbitrum"]["usd"]*1/200            
           random_float = str(round(random.uniform(price1, price2), 2))
         return random_float
     except Exception as e:
@@ -195,20 +200,20 @@ def get_inference(token):
         if response.status_code == 200:
           data = response.json()
           if token == 'BTC':
-            price1 = data["bitcoin"]["usd"] + data["bitcoin"]["usd"]*1/100
-            price2 = data["bitcoin"]["usd"] - data["bitcoin"]["usd"]*1/100
+            price1 = data["bitcoin"]["usd"] + data["bitcoin"]["usd"]*1/200
+            price2 = data["bitcoin"]["usd"] - data["bitcoin"]["usd"]*1/200
           if token == 'ETH':
-            price1 = data["ethereum"]["usd"] + data["ethereum"]["usd"]*1/100
-            price2 = data["ethereum"]["usd"] - data["ethereum"]["usd"]*1/100      
+            price1 = data["ethereum"]["usd"] + data["ethereum"]["usd"]*1/200
+            price2 = data["ethereum"]["usd"] - data["ethereum"]["usd"]*1/200      
           if token == 'SOL':
-            price1 = data["solana"]["usd"] + data["solana"]["usd"]*1/100
-            price2 = data["solana"]["usd"] - data["solana"]["usd"]*1/100  
+            price1 = data["solana"]["usd"] + data["solana"]["usd"]*1/200
+            price2 = data["solana"]["usd"] - data["solana"]["usd"]*1/200  
           if token == 'BNB':
-            price1 = data["binancecoin"]["usd"] + data["binancecoin"]["usd"]*1/100
-            price2 = data["binancecoin"]["usd"] - data["binancecoin"]["usd"]*1/100   
+            price1 = data["binancecoin"]["usd"] + data["binancecoin"]["usd"]*1/200
+            price2 = data["binancecoin"]["usd"] - data["binancecoin"]["usd"]*1/200   
           if token == 'ARB':
-            price1 = data["arbitrum"]["usd"] + data["arbitrum"]["usd"]*1/100
-            price2 = data["arbitrum"]["usd"] - data["arbitrum"]["usd"]*1/100            
+            price1 = data["arbitrum"]["usd"] + data["arbitrum"]["usd"]*1/200
+            price2 = data["arbitrum"]["usd"] - data["arbitrum"]["usd"]*1/200            
           random_float = str(round(random.uniform(price1, price2)),2)
         return random_float
 
@@ -225,11 +230,6 @@ gunicorn[gthread]
 transformers[torch]
 pandas
 python-dotenv
-```
-- Run config
-```bash
-chmod +x init.config
-./init.config
 ```
 ## Run worker
 ```bash
