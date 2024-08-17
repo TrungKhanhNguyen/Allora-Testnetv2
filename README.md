@@ -63,7 +63,7 @@ rm -rf config.json && nano config.json
         {
             "topicId": 1,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 1,
+            "loopSeconds": 5,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "ETH"
@@ -81,7 +81,7 @@ rm -rf config.json && nano config.json
         {
             "topicId": 5,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 4,
+            "loopSeconds": 5,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "SOL"
@@ -90,7 +90,7 @@ rm -rf config.json && nano config.json
         {
             "topicId": 7,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 2,
+            "loopSeconds": 5,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "ETH"
@@ -99,7 +99,7 @@ rm -rf config.json && nano config.json
         {
             "topicId": 8,
             "inferenceEntrypointName": "api-worker-reputer",
-            "loopSeconds": 3,
+            "loopSeconds": 5,
             "parameters": {
                 "InferenceEndpoint": "http://inference:8000/inference/{Token}",
                 "Token": "BNB"
