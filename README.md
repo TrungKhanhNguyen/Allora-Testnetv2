@@ -43,7 +43,6 @@ git clone https://github.com/allora-network/allora-huggingface-walkthrough
 cd allora-huggingface-walkthrough
 mkdir -p worker-data
 chmod -R 777 worker-data
-cp config.example.json config.json
 rm -rf config.json && nano config.json
 ```
 - Paste this to config file, replace ```PHRASE``` with your Mnemonic
