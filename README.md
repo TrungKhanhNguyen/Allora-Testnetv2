@@ -44,7 +44,7 @@ cd allora-huggingface-walkthrough
 mkdir -p worker-data
 chmod -R 777 worker-data
 cp config.example.json config.json
-nano config.json
+rm -rf config.json && nano config.json
 ```
 - Paste this to config file, replace ```PHRASE``` with your Mnemonic
 ```bash 
@@ -127,8 +127,7 @@ chmod +x init.config
 ```
 - Edit app.py file, with ```API_KEY``` is your API Key in Coingecko
 ```bash
-rm -rf app.py
-nano app.py
+rm -rf app.py && nano app.py
 ```
 ```bash
 from flask import Flask, Response
