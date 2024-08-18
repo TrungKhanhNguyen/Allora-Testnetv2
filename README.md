@@ -228,7 +228,7 @@ pandas
 python-dotenv
 ```
 
-***REMEMBER change port on ```app.py```, ```docker-compose.yml```, ```config.json```, ```Dockerfile``` before run worker***
+***Change port on ```app.py```, ```docker-compose.yml```, ```config.json```, ```Dockerfile``` if you want other ports than 8000***
 ## Run worker
 ```bash
 docker compose up --build -d
